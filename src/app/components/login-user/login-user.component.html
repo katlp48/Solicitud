@@ -1,0 +1,70 @@
+<div class="title">
+   <a class="icon-title">Estubeca</a>
+</div>
+
+<div class="container">
+   <div class="row">
+      <div class="col-md-6">
+         <div class="card">
+               <form [formGroup]="myForm" (ngSubmit)="login()">
+                  <div class="logo">
+                     <img  src="../../../assets/img/logo-fondo.png" alt="logo-con-fondo">
+                     <span style="font-weight: bold; font-family: 'Be Vietnam', sans-serif;text-align: center;">Inicio de sesión</span>
+                   </div>
+                  <div>
+                     <label for="exampleInputEmail1" class="form-label">Correo</label>
+                  </div>
+                  <div class="mb-3">
+                    <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >                  
+                  </div>
+                  <div
+                  *ngIf="
+                    myForm.get('email')?.hasError('required') &&
+                    myForm.get('email')?.touched
+                  "
+                >
+                  <span class="mda-form-msg"> Este campo es obligatorio </span>
+                </div>
+                <div
+                  *ngIf="myForm.get('email')?.hasError('email')"
+                     >
+                  <span class="mda-form-msg">
+                    Este campo no tiene formato de correo
+                  </span>
+                </div>
+                  
+                  <br/>
+                  <div>
+                     <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                  </div>
+                  <div class="mb-3"> 
+                    <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div
+                  *ngIf="
+                    myForm.get('password')?.hasError('required') &&
+                    myForm.get('password')?.touched
+                  "
+                >
+                  <span class="mda-form-msg"> Este campo es obligatorio </span>
+                </div>
+              
+                  <br/>
+                  <button type="submit" class="btn btn-primary"><span>Ingresar</span></button>
+                  <div class="boton-registro"> 
+                     <span>¿Tienes cuenta? </span>           
+                     <button mat-raised-button routerLink="/register-user">
+                        <span>Crear cuenta</span> </button>
+                  </div>
+                  
+                </form>
+         </div>
+         <img src="../../../assets/img/login.png" alt="representacion-login">
+
+      </div>
+
+   </div>
+</div>
+
+
+

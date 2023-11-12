@@ -1,0 +1,62 @@
+<!-- <div class="titulo" *ngFor="let detalle of detalles">
+    <p>{{detalle.name}}</p>
+    <p>{{detalle.benefits}}</p>
+    <p>{{detalle.description}}</p>
+    <p>{{detalle.requirements}}</p>
+    <p>{{detalle.telephone}}</p>
+    <p>{{detalle.urlpage}}</p>
+</div>  -->
+
+<div class="alinear">
+    <h1 class="title">{{beca.title}}</h1><br/>
+    <div class="alinear">
+    <div class="container-page">
+        <mat-card class="cajita">
+         <mat-card-content >
+            <h1>Descripción</h1>
+            <p>
+             {{beca.description}}
+            </p>
+          </mat-card-content>
+        </mat-card>
+        <div class="alinear-cajita">
+            
+                <mat-card class="card1">
+                <mat-card-content>
+                  <h1>Beneficios</h1>
+                    <p>
+                    {{beca.beneficios}}
+                    </p>
+                </mat-card-content>
+                </mat-card>
+            
+            
+                <mat-card class="card1">
+                <mat-card-content>
+                    <h1>Requisitos</h1>
+                    <p>
+                    {{beca.requisitos}}
+                    </p>
+                </mat-card-content>
+                </mat-card>
+            
+        </div>
+          <mat-card class="cajita">
+          <mat-card-content>
+            <h1>Teléfono</h1>
+            <p>
+             {{beca.telefono}}
+            </p>
+          </mat-card-content>
+        </mat-card>
+
+    
+    <br/>
+    <mat-card class="enlace">
+        <mat-card-content>
+        <a href="{{ beca.urlPage }}" target="_blank">Enlace a la página web</a>
+        </mat-card-content>
+    </mat-card>
+    </div>
+</div>
+

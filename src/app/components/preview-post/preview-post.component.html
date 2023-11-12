@@ -1,0 +1,23 @@
+<div class="article-preview">
+    <app-meta-post [post]="post" [detalle]="detalle">
+      <app-favorite-button class="meta-post"
+        [post]="post"
+        (toggle)="onToggleFavorite($event)"
+        class="pull-xs-right">
+        {{ contador }}
+      </app-favorite-button>
+    </app-meta-post>
+  
+    <a [routerLink]="['/homePage',userId,'foro',userId,'post',post.id]"
+     class="preview-link">
+      <h1>{{ post.title }}</h1>
+      <p>{{ post.description }}</p>
+      <span>Read more...</span>
+      <ul class="tag-list">
+        <li class="tag-default tag-pill tag-outline"
+          *ngFor="let tag of lista">
+          {{ tag }}
+        </li>
+      </ul>
+    </a>
+  </div>

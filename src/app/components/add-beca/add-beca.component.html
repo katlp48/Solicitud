@@ -1,0 +1,112 @@
+<div class="row">
+  <div class="col-lg-6">
+    <h2 class="alinear">Registro de Beca</h2>
+  </div>
+</div>
+<div class="container-page">
+  <div class="row">
+    <div class="col-lg-4">
+      <form [formGroup]="myForm" autocomplete="off">
+
+        <fieldset class="form-group">
+          <div *ngIf="
+        myForm.get('title')?.hasError('required') &&
+        myForm.get('title')?.touched
+      ">
+            <span class="mda-form-msg"> * Este campo es obligatorio </span>
+          </div>
+          <div *ngIf="myForm.get('title')?.hasError('maxlength')" style="margin-top: -20px">
+            <span class="mda-form-msg">
+              This field must have a maximum of 60 characters
+            </span>
+          </div>
+          <input class="form-control" style="font-family: 'Be Vietnam', sans-serif; font-size: 20px;"
+            formControlName="title" type="text" placeholder="Title" />
+        </fieldset>
+
+
+        <fieldset class="form-group">
+          <div *ngIf="
+        myForm.get('imgUrl')?.hasError('required') &&
+        myForm.get('imgUrl')?.touched
+      ">
+            <span class="mda-form-msg"> * Este campo es obligatorio </span>
+          </div>
+          <input class="form-control" style="font-family: 'Be Vietnam', sans-serif; " formControlName="imgUrl"
+            type="text" placeholder="Imagen url" />
+        </fieldset>
+
+
+        <fieldset class="form-group">
+          <div *ngIf="
+        myForm.get('description')?.hasError('required') &&
+        myForm.get('description')?.touched
+      ">
+            <span class="mda-form-msg"> * Este campo es obligatorio </span>
+          </div>
+          <textarea class="form-control" style="font-family: 'Be Vietnam', sans-serif;" formControlName="description"
+            rows="5" placeholder="Descripción">
+        </textarea>
+
+        </fieldset>
+
+        <fieldset class="form-group">
+          <div *ngIf="
+        myForm.get('requirements')?.hasError('required') &&
+        myForm.get('requirements')?.touched
+      ">
+            <span class="mda-form-msg"> * Este campo es obligatorio </span>
+          </div>
+          <textarea class="form-control" style="font-family: 'Be Vietnam', sans-serif;" formControlName="requirements"
+            rows="5" placeholder="Requisitos">
+        </textarea>
+
+        </fieldset>
+        <fieldset class="form-group">
+          <div *ngIf="
+        myForm.get('telephone')?.hasError('required') &&
+        myForm.get('telephone')?.touched
+      ">
+            <span class="mda-form-msg"> * Este campo es obligatorio </span>
+          </div>
+          <input class="form-control" style="font-family: 'Be Vietnam', sans-serif; " formControlName="telephone"
+            type="text" placeholder="Teléfono" />
+        </fieldset>
+
+        <fieldset class="form-group">
+          <div *ngIf="
+        myForm.get('urlpage')?.hasError('required') &&
+        myForm.get('urlpage')?.touched
+      ">
+            <span class="mda-form-msg"> * Este campo es obligatorio </span>
+          </div>
+          <input class="form-control" style="font-family: 'Be Vietnam', sans-serif;" formControlName="urlpage"
+            type="text" placeholder="Url" />
+        </fieldset>
+
+        <fieldset class="form-group">
+          <div *ngIf="
+        myForm.get('benefits')?.hasError('required') &&
+        myForm.get('benefits')?.touched
+      ">
+            <span class="mda-form-msg"> * Este campo es obligatorio </span>
+          </div>
+          <textarea class="form-control" style="font-family: 'Be Vietnam', sans-serif;" formControlName="benefits"
+            rows="5" placeholder="Beneficios">
+        </textarea>
+        </fieldset>
+
+        <div class="options">
+          <button class="btn-primary" [disabled]="myForm.invalid" type="button" style="margin-left: 10 px"
+            (click)="saveBeca()">
+            <span>Save</span>
+          </button>
+          <span style="margin: 20px;"></span>
+          <button class="btn-primary" type="button" [routerLink]="['/homePage',userId,'becas',userId]">
+            <span>Cancel</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

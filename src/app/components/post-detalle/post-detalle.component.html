@@ -1,0 +1,91 @@
+<div class="article-page">
+
+  <div class="banner"></div>
+  <div class="container">
+
+    <p> {{post.createdAt | date: 'longDate' }}</p>
+    <h1>{{ post.title }}</h1>
+
+    <div class="options">
+      <div class="article-actions" [hidden]="!canModify">
+        <a class="btn-icon"  
+        [routerLink]="['/homePage',userId,'edit', userId, 'post',post.id]">
+          <button mat-icon-button class="btn-sm">
+            <mat-icon style="color: #e15639">edit</mat-icon>
+          </button>
+          <span> Edit post </span>
+        </a>
+
+        <a class="btn-icon" (click)="deletePost(post.id)">
+          <button mat-icon-button class="btn-sm">
+            <mat-icon style="color: #1d1c5a">delete</mat-icon>
+          </button>
+          <span> Delete post </span>
+        </a>
+
+      </div>
+      <app-favorite-button [post]="post" (toggle)="onToggleFavorite($event)">
+        <span class="counter" style="font-size: 16px;">{{ " " + contador }}
+        </span>
+      </app-favorite-button>
+    </div>
+
+
+    <div class="col-md-12">
+      <span> {{ post.body }} </span>
+    </div>
+
+
+    <div class="tags">
+
+      <span> Tags :</span>
+      <ul class="tag-list">
+        <li *ngFor="let tag of lista" class="tag-default tag-pill tag-outline">
+          {{ tag }}
+        </li>
+      </ul>
+
+    </div>
+    <div class="autor">
+      <app-meta-post [post]="post" [detalle]="detalle">
+      </app-meta-post>
+    </div>
+  </div>
+
+</div>
+<div style="margin-bottom: 50px;"></div>
+<hr style="border-width: 3px;" />
+<br>
+
+<div class="article-page">
+  <div *ngIf="
+  commentForm.get('body')?.hasError('required') &&
+  commentForm.get('body')?.touched
+" class="error-comentario">
+  <span class="mda-form-msg"> * No ingresaste un comentario </span>
+</div>
+
+  <form class="card-form-group" [formGroup]="commentForm">
+    <fieldset [disabled]="isSubmitting">
+      <div class="card-block">
+        <textarea class="form-control" style="font-family: 'Be Vietnam', sans-serif;font-size: 17px;"
+          formControlName="body" rows="3" placeholder="Escribe un comentario....">
+        </textarea>
+      </div>
+       
+      <div class="card-footer">
+        <img src="../../../assets/img/logo.png" class="comment-author-img" />
+        <button class="btn btn-sm btn-primary" type="submit" 
+        [disabled]="commentForm.invalid" (click)="addComment()">
+          <span>Comentar</span> 
+        </button>
+      </div>
+    </fieldset>
+
+  </form>
+
+  <app-list-comments *ngFor="let comentario of comments" [comentario]="comentario" [userId]="userId">
+
+  </app-list-comments>
+<div style="margin-bottom: 100px;"></div>
+</div>

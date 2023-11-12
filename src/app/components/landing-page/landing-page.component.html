@@ -1,0 +1,193 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../landing-page/landing-page.component.css">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam&family=Concert+One&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="img/icono.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Estubeca</title>
+</head>
+
+<body>
+  <header>
+    <nav class="nav">
+      <a class="logo-titulo">Estubeca</a>
+
+      <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#aboutus">Nosotros</a></li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#community">Comunidad</a></li>
+        <li><a href="#contactus">Contáctanos</a></li>
+      </ul>
+
+      <div class = "hide">
+        <i class="fa fa-bars" aria-hidden="true"> </i>
+      </div>
+    </nav>
+    <div class="header-cont">
+      <img src="../../../assets/landing/logo_estubeca.png" alt="logo-estubeca">
+      <h1>Es tu oportunidad de demostrar lo que vales</h1>
+      <button href="#" [routerLink]="['/login-user']"> <span>Regístrate</span> </button>
+    </div>
+  </header>
+  <main>
+    <section class="aboutus-cont" id="aboutus">
+      <div class="container">
+        <h2 class="titulo">Nosotros</h2>
+        <div class="nosotros">
+          <img src="../../../assets/landing/nosotros.jpeg" alt="imagen de nosotros">
+          <div class="about-text">
+            <h3>¿Quiénes somos?</h3>
+            <p>Somos una empresa con la misión de difundir información confiable sobre oportunidades académicas que
+              ayuden en el desarrollo integral de los estudiantes en el Perú. Nuestra visión es ser una plataforma web
+              reconocida por el Perú que priorice al usuario, brindando el soporte académico que cada estudiante
+              necesite. De igual manera, se tiene proyectado la expansión de información sobre los requisitos básicos
+              para estudiantes de Latinoamérica.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-cont" id="services">
+      <div class="container">
+        <h2 class="titulo">Nuestros servicios</h2>
+        <div class="servicio-cont">
+          <div class="carta">
+            <img src="../../../assets/landing/ilustracion1.png" alt="imagene-búsqueda-de-becas">
+            <div class="carta-text">
+              <h3>Búsqueda personalizada de becas</h3>
+              <p>Te damos la oportunidad de indicar tus preferencias al momento de crear una cuenta nueva en nuestra
+                plataforma. Podrás elegir el tipo de beca, país en el que te encuentras interesado, vacantes, entre más
+                opciones.</p>
+            </div>
+          </div>
+
+          <div class="carta">
+            <div class="carta-text">
+              <h3>Acceso a un foro de la comunidad becaria</h3>
+              <p>Al poseer una cuenta en la plataforma de EstuBeca, tendrás la posibilidad de interactuar con miles de
+                usuarios con los mismos intereses.</p>
+            </div>
+            <img src="../../../assets/landing/ilustracion2.png" alt="imagen-acceso-a-foros">
+          </div>
+
+
+          <div class="carta">
+            <img src="../../../assets/landing/ilustracion3.png" alt="imagen-acceso-a-cursos">
+            <div class="carta-text">
+              <h3>Acceso a cursos de preparación académica</h3>
+              <p>Sé capaz de desarrollar tus habilidades académicas gracias a los cursos ofrecidos en la seccón Learn.
+                Aprende con expertos en el área que desees para mejorar tus habilidades cognitivas que te ayudarán a
+                alcanza la beca anhelada.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="community-cont" id="community">
+      <h2 class="titulo">Comunidad</h2>
+      <div class="container">
+        <div class="testimonio-cont">
+          <div class="testimonio">
+            <div class="info">
+              <img src="../../../assets/landing/comillas.png">
+              <p>Recomiendo la beca de Pronabec, porque te brinda acceso a educación de calidad y muchos beneficios más</p>
+            </div>
+
+            <div class="perfil">
+              <img src="../../../assets/landing/persona1.jpeg" alt="Fernanda Lopez">
+              <h4>Fernanda Lopez</h4>
+              <p>Estudiante de Medicina Humana</p>
+            </div>
+          </div>
+          <div class="testimonio">
+            <div class="info">
+              <img src="../../../assets/landing/comillas.png">
+              <p>Gracias a Estubeca pude encontrar una beca que me permitiera estudiar mi postgrado</p>
+            </div>
+
+            <div class="perfil">
+              <img src="../../../assets/landing/persona2.jpeg" alt="Juliana Guerrero">
+              <h4>Juliana Guerrero</h4>
+              <p>Estudiante de Derecho</p>
+            </div>
+          </div>
+          <div class="testimonio">
+            <div class="info">
+              <img src="../../../assets/landing/comillas.png">
+              <p>Se deberían difundir más plataformas de este tipo, para que más estudiantes las conozcan y postulen a ellas</p>
+            </div>
+
+            <div class="perfil">
+              <img src="../../../assets/landing/persona3.jpeg" alt="José Torres">
+              <h4>José Torres</h4>
+              <p>Estudiante de Derecho</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contactus">
+      <div class="container">
+        <h2 class="titulo">Contáctanos</h2>
+      
+        <form  [formGroup]="contactForm" action="https://formspree.io/f/xrgddbnp"
+        method="POST" class="form" id="my-form">
+             
+          <input  class="form-group"class="input" type="text" name="nombre" id="" placeholder="Nombre" formControlName="name">
+          
+          <input class="input" type="email" name="email" id="" placeholder="Email" formControlName="email">
+          
+          <textarea class="input" name="mensaje" id="" cols="30" rows="7" placeholder="Mensaje" formControlName="mensaje"></textarea>
+          <br>
+          <div *ngIf="
+          (contactForm.get('name')?.hasError('required') &&
+          contactForm.get('name')?.touched) || (contactForm.get('email')?.hasError('required') &&
+          contactForm.get('email')?.touched) || (contactForm.get('mensaje')?.hasError('required') &&
+          contactForm.get('mensaje')?.touched)
+        ">    <span class="mda-form-msg"> * Complete todos los campos </span>
+      </div>
+        <br>
+          <button type="submit" [disabled]="contactForm.invalid"
+          id="my-form-button"
+          > <span>Enviar</span> </button>    
+          <div class="mensajito"> <p id="my-form-status"></p></div>
+        </form>
+       
+
+        </div>
+     </section>
+  </main>
+  <footer>
+    <div class="footer-cont">
+      <div class="content-foo">
+        <h4>Phone</h4>
+        <p>924204536</p>
+      </div>
+      <div class="content-foo">
+        <h4>Email</h4>
+        <p>school.estubeca@edu.pe</p>
+      </div>
+      <div class="content-foo">
+        <h4>Location</h4>
+        <p>Lima, Perú</p>
+      </div>
+      <div class="content-foo">
+        <h4>Redes sociales</h4>
+        <ul>
+          <li><a href="#" style="color: #e2a36c;"><i class="fa fa-twitter-square"></i></a></li>
+          <li><a href="#" style="color: #e2a36c;"><i class="fa fa-facebook-square"></i></a></li>
+          <li><a href="#" style="color: #e2a36c;"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>

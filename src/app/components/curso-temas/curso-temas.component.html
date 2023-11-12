@@ -1,0 +1,54 @@
+<ng-container [ngSwitch]="stepperOrientation | async">
+  <div *ngSwitchCase="'horizontal'"></div>
+  <div *ngSwitchCase="'vertical'"></div>
+</ng-container>
+
+<mat-stepper
+  class="example-stepper"
+  [orientation]="(stepperOrientation | async)!">
+  <mat-step [stepControl]="firstFormGroup" label="Introduccion">
+    <h1>{{ introduccion.title }}</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/T6cudtq6bWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+   <h2>{{introduccion.description}}</h2>
+   <p>{{introduccion.body}}</p>
+    <br>
+    <br>
+    <div>
+      <button mat-button matStepperPrevious>Volver</button>
+      <button mat-button matStepperNext>Siguiente</button>
+    </div>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup" label="Tema 1">
+    <h1>{{ tema1.title }}</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/T6cudtq6bWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+   <h2>{{tema1.description}}</h2>
+   <p>{{tema1.body}}</p>
+    <br>
+    <br>
+    <div>
+      <button mat-button matStepperPrevious>Volver</button>
+      <button mat-button matStepperNext>Siguiente</button>
+    </div>
+  </mat-step>
+  <mat-step [stepControl]="thirdFormGroup" label="Tema 2">
+    <h1>{{ tema2.title }}</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/T6cudtq6bWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+   <h2>{{tema2.description}}</h2>
+   <p>{{tema2.body}}</p>
+    <br>
+    <br>
+    
+    <div>
+      <button mat-button matStepperPrevious>Volver</button>
+      <button mat-button matStepperNext>Siguiente</button>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <p>Terminaste el curso.</p>
+    <div>
+      <button mat-button matStepperPrevious>Volver</button>
+      <button mat-button matStepperPrevious>Termina el curso</button>
+    </div>
+  </mat-step>
+</mat-stepper>

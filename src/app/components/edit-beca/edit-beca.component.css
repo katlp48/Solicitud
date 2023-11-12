@@ -1,0 +1,48 @@
+.alinear {
+    text-align: center;
+    margin-top: 20px;
+    font-size: x-large;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  fieldset {
+    border: 1px solid rgb(219, 159, 91);
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  .form-group {
+    margin-bottom: 1.1rem;
+    font-family: 'Be Vietnam', sans-serif;
+  }
+  
+  .form-control {
+    display: block;
+    width: 100%;
+    line-height: 1.25;
+    color: #000000;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: .25rem;
+    padding: .75rem 1.5rem;
+    border-radius: .3rem
+  }
+  
+  .container-page {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flow-root;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+

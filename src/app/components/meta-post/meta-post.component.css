@@ -1,0 +1,61 @@
+.article-meta {
+    display: block;
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    height: 4.2em;
+    align-items: center;
+
+}
+
+.article-meta img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%
+}
+
+.article-meta .info {
+    margin: 0 1.5rem 0 .3rem;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1rem;
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+.article-meta .info .author {
+    display: block;
+    font-weight: 500 !important;
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+.article-meta .info .date {
+    color: rgb(165, 164, 164);
+    font-size: .8rem;
+    display: block;
+    font-family: 'Be Vietnam', sans-serif;
+}
+.article-meta .info .username {
+    color: rgb(165, 164, 164);
+    font-size: .8rem;
+    display: block;
+    font-family: 'Be Vietnam', sans-serif;
+    margin-top: 5px;
+}
+.article-meta .info .grade {
+    color: rgb(165, 164, 164);
+    font-size: .8rem;
+    display: block;
+    font-family: 'Be Vietnam', sans-serif;
+    margin-top: 5px;
+}
+
+.article-page .banner .article-meta .author {
+    color: #fff
+}
+
+.article-meta .info {
+    text-align: left
+}

@@ -1,0 +1,33 @@
+<div>
+    <h2 class="alinear2"> Lista de temas</h2>
+  </div>
+  <div class="col-log-6" style="text-align:right">
+    <button mat-raised-button [routerLink]="['/homePage',userId,'addTema',curso.id]">
+      Añadir Tema
+    </button>
+  </div>
+
+  <div class="container">
+  <mat-card class="tema-card" *ngFor="let tem of temas">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{tem.title}}</mat-card-title>
+      <mat-card-subtitle>{{tem.description}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        {{tem.body}}
+      </p>
+  
+    </mat-card-content>
+    <mat-card-actions>
+      <a class="pointer" [routerLink]="['/homePage',this.userId,'edit',this.userId, 'tema', tem.id]"
+        style="color: #1878b0; cursor: pointer">
+        <mat-icon>edit</mat-icon>
+      </a>
+      <a (click)="deleteTema(tem.id)" class="pointer" style="color: #e15639">
+        <mat-icon style="cursor: pointer">delete</mat-icon>
+      </a>
+    </mat-card-actions>
+  </mat-card>
+  </div>

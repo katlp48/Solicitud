@@ -1,0 +1,571 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Be Vietnam', sans-serif;
+    color: #000;
+}
+h1{
+
+    text-align: center;
+    font-family: 'Concert One';
+}
+h2{
+    margin-top: 40px;
+    margin-bottom: 100px;
+    text-align: center;
+    font-family: 'Concert One';
+}
+
+h3{
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Concert One';
+}
+
+.container {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+header{
+    width: 100%;
+    height:100vh;
+    background-image: linear-gradient(45deg,#F1CB9A99,#F1CB9A99),url(src\assets\landing\fondo.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.nav{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    transition:all 0.5s ease;
+
+}
+.nav.responsive {position: relative;}
+
+.nav.active{
+    background:rgb(255, 255, 255);
+    padding: 15px;
+}
+.nav.active .logo, .nav.active a{
+    color: #000;
+}
+.nav.active a:hover{
+    background: rgba(226, 202, 173, 0.849);
+    color: #000;
+}
+
+.logo-titulo{
+    font-size: 30px;
+    color: #000 ;
+    font-weight: bold;
+    font-family: 'Be Vietnam', sans-serif;
+}
+.titulo{
+    font-size: 40px;
+    color: #000 ;
+    font-weight: bold;
+}
+.menu{
+    display:flex;
+    overflow: hidden;
+}
+.menu li{
+    list-style: none;
+    margin:10px;
+    text-align: center;
+    font-size: 18px;
+}
+.menu li a{
+    color: #303030;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Be Vietnam', sans-serif;
+}
+.menu li a:hover{
+    padding: 10px 15px;
+    background: rgba(226, 202, 173, 0.849);
+    color: #000;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.hide{
+    font-size: 22px;
+    padding: 16px;
+    background-color: #D8843B;
+    color: #000;
+    cursor: pointer;
+    display: none;
+    border-radius: 10px;
+}
+.header-cont{
+    max-width: 1200px;
+    height: 100%;
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+.header-cont img {
+    width: 300px;
+    margin-bottom: 50px;
+}
+.header-cont h1 {
+
+    font-size:60px;
+    margin-bottom: 50px;
+}
+.mda-form-msg{
+color: red;
+font-size: 14px;
+float: left;
+justify-content: flex-start;
+}
+#my-form-status{
+    font-family: 'Be Vietnam', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.mensajito{
+	justify-content: center;
+    margin-top: 2em;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-bottom: -40px;
+}
+.header-cont button {
+    font-family: 'Be Vietnam', sans-serif;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 27%;
+	height: 70px;
+    margin-top: 4em;
+	background: #D8843B;
+	color: #fff;
+    text-decoration: none;
+	font-size: 20px;
+	font-weight: 400;
+	border: none;
+	cursor: pointer;
+	transition: .3s ease all;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+}
+.header-cont button span {
+
+	position: relative;
+	z-index: 2;
+	transition: .3s ease all;
+}
+
+.header-cont button::after {
+	content: "";
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: calc(-100% - 80px);
+	border-bottom: 80px solid #e7b048;
+	border-right: 80px solid transparent;
+	transition: .4s ease-in-out all;
+}
+
+.header-cont button:hover::after {
+	left: 0;
+}
+
+/*Hasta  aca parte principal*/
+/*sobre nosotros*/
+.nosotros{
+    margin-top: 30px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.about-text{
+    width: 50%;
+    text-align: center;
+    background-color: #e4c49fcc;
+    border-radius: 40px;
+    padding: 30px;
+}
+
+.aboutus-cont img{
+    width: 40%;
+    height: 30%;
+} 
+
+/* Servicios*/
+.servicio-cont{
+    max-width: 1500px;
+    justify-content: center;
+}
+.carta{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    background-color: #eccf98;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    border-radius: 40px 0px 40px 0px;
+}
+.carta-text{
+    width: 50%;
+}
+.carta img{
+    width: 30%;
+    height: 30%;
+    padding:20px;
+} 
+.carta-text h3{
+    font-size: 30px;
+}
+.carta-text p{
+  text-align: center;
+}
+
+
+/*Testimonios*/
+.testimonio-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: -50px;
+}
+
+.testimonio {
+    width:28%;
+    height: 480px;
+    padding:20px;
+    background:#ffffff;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px 0 rgba(139, 133, 131, 0.747);
+    transform: scale(0.9);
+    transition: transform 0.5s;
+  }
+  .testimonio .info, .testimonio .perfil{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .testimonio .info img{
+    margin-top: 20px;
+    width:50px;
+    height:50px;
+  }
+  .testimonio .info p{
+    font-size:17px;
+    line-height:22px;
+    text-align: center;
+    color:#4b4b4b;
+    margin-top: 25px;
+  }
+  .testimonio .perfil {margin-top:30px;}
+  .testimonio .perfil img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    border: 10px outset #dfac61;
+  }
+  .testimonio .perfil h4,  .testimonio .perfil p{
+     margin:0;
+  }
+  .testimonio .perfil h4{
+     font-size:20px;
+     font-weight:600;
+     margin-top:10px;
+     color:#131313;
+  }
+  .testimonio .perfil p{
+     font-size:16px;
+     margin-top:5px;
+     color:#525252;
+  }
+  .testimonio:hover{
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    transform: scale(1.03);
+}
+
+/* Contacto */
+
+#contactus .container{
+    margin-top: -40px;
+    margin-bottom: 60px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input{
+    background: #F6E0C2;
+    border: 0;
+    color: rgb(0, 0, 0);
+    outline: none;
+    border: 0px;
+    padding: 20px 30px;
+    font-family: 'Be Vietnam', sans-serif;
+    font-size: 17px;
+}
+
+.input::placeholder{
+    color: rgb(0, 0, 0);
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+input[type="text"], input[type="email"]{
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 30px;
+}
+
+.form textarea{
+    width: 100%;
+    font-family: 'Be Vietnam', sans-serif;
+}
+.form button{
+    font-family: 'Be Vietnam', sans-serif;
+	width: 100%;
+	height: 65px;
+    margin-top: 30px;
+	background: #D8843B;
+	color: #fff;
+    text-decoration: none;
+	font-size: 18px;
+	font-weight: 700;
+	border: none;
+	cursor: pointer;
+	transition: .3s ease all;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+}
+.form button span {
+
+	position: relative;
+	z-index: 2;
+	transition: .3s ease all;
+}
+
+.form button::after {
+	content: "";
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: calc(-100% - 80px);
+	border-bottom: 80px solid #e7b048;
+	border-right: 80px solid transparent;
+	transition: .4s ease-in-out all;
+}
+
+.form button:hover::after {
+	left: 0;
+}
+
+ /* Footer */
+
+ footer{
+
+	background-color: #414a4f;
+	padding: 60px 0;
+}
+
+.footer-cont{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foo h4{
+    color: #fff;
+    border-bottom: 3px solid #e2a36c;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content-foo p{
+    color: #ccc;
+}
+
+.content-foo ul{
+	display: flex;
+	margin-bottom: 25px;
+	font-size: 32px;
+    list-style: none;
+}
+
+.content-foo ul li{
+	margin: 0 8px;	
+}
+
+.content-foo ul li:first-child{
+	margin-left: 0;	
+}
+
+.content-foo ul li:last-child{
+	margin-right: 0;	
+}
+
+/*Diseño responsive*/
+@media only screen and (max-width:1200px){
+    .header-cont h1{
+        text-align: center;
+        font-family: 'Concert One';
+        font-size: 45px;
+        width: 70%;
+    }
+    .about-text p{
+        font-size: 17px;
+    }
+    .carta{
+    padding: 40px;
+    }
+    .testimonio{
+        height: 550px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:768px){
+    
+    .header-cont h1{
+        text-align: center;
+        font-family: 'Concert One';
+        font-size: 50px;
+        width: 70%;
+    }
+    .header-cont img{
+        width: 40%;
+    }
+    .titulo{
+        font-size: 38px;
+    }
+    h3{
+        font-size: 22px;
+    }
+    p{
+        font-family: 'Be Vietnam', sans-serif;
+        font-size: 15px;
+    }
+    /*menu*/
+
+    .menu li{
+        text-align: center;
+        font-size: 17px;
+        border-radius: 10px;
+    }
+    .menu li a{
+        margin-left: 0px;
+    }
+
+    .hide{
+        text-align: center;
+        display: block;
+
+    }
+    nav .logo-titulo{
+        text-align: start;
+
+    }
+    nav .menu{
+
+        position: relative;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        display: none;
+    }
+    nav {
+        position:relative;
+        display:flex;
+    }
+    /*Nosotros*/
+    
+    .nosotros{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .nosotros img{
+        width: 100%;
+        margin-top: -60px;
+        margin-bottom: 50px;
+    } 
+    .about-text {
+        width: 90%;
+    }
+    /*Servicios*/
+ 
+    .carta{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .carta img{
+        width: 70%;
+        height: 70%;
+    }
+    .carta-text{
+        width: 80%;
+        padding: 20px;
+    }
+    /*Comunidad*/
+   .testimonio{
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   }
+
+    /*Contacto*/
+    .container form{
+        margin-top: -40px;
+    }
+    /* Footer */
+    .footer-cont{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .content-foo{
+        margin-bottom: 30px;
+    }
+
+}

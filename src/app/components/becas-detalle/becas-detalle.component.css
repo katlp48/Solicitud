@@ -1,0 +1,102 @@
+
+.title{
+    font-size: xx-large;
+    font-weight: bolder;
+    line-height: 3;
+    text-align: center;
+    font-family: 'Concert One';
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+h1{
+  font-weight: bolder;
+  font-size: 1.6em;
+  font-family: 'Be Vietnam', sans-serif;
+}
+p{
+  font-family: 'Be Vietnam', sans-serif;
+}
+.alinear .cuadrito{
+    background-color: aqua;
+    border-radius: 5%;
+    height: max-content;
+    width:max-content;
+    font-family: 'Be Vietnam', sans-serif;
+}
+.alinear {
+    text-align: justify;
+    margin-top: 20px;
+    font-size: medium;
+    font-family: 'Be Vietnam', sans-serif;
+
+  }
+
+  .alinear-cajita {
+    text-align: justify;
+    margin-top: 20px;
+    font-size: medium;
+    font-family: 'Be Vietnam', sans-serif;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .card1{
+    max-width: 50%;
+
+    padding: 20px, 20px;
+    background:#ffffff;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px 0 rgba(139, 133, 131, 0.747);
+    transform: scale(0.9);
+    transition: transform 0.5s;
+    border-radius: 5%;
+    white-space: pre-line;
+    font-family: 'Be Vietnam', sans-serif;
+  }
+
+  .cajita{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    background-color:#ffdbbcea;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    border-radius: 40px 0px 40px 0px;
+    font-family: 'Be Vietnam', sans-serif;
+  }
+
+  .container-page {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flow-root;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Be Vietnam', sans-serif;
+  }
+
+  .enlace {
+    height: auto;
+    padding: 20px, 20px;
+    background:#ffffff;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px 0 rgba(139, 133, 131, 0.747);
+    transform: scale(0.9);
+    transition: transform 0.5s;
+    text-align: center;
+    font-family: 'Be Vietnam', sans-serif;
+  }
+  .enlace a{
+    font-family: 'Be Vietnam', sans-serif;
+    font-size: 1.2em;
+  
+  }
+  @media only screen and (max-width:600px){
+    .alinear-cajita{
+      display: block;
+    }
+    .card1{
+      max-width: 100%;
+    }
+  }

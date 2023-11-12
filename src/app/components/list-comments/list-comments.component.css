@@ -1,0 +1,190 @@
+p, a, span{
+    font-family: 'Be Vietnam', sans-serif;
+}
+.card {
+    position: relative;
+    flex: 0 0 100%;
+    max-width: 50%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: .75rem;
+
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .125)
+}
+
+.card-block {
+    padding: 1.25rem;
+    padding-top: 2em;
+    padding-left: 2em;
+}
+
+.card-block::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.card-title {
+    margin-bottom: .75rem
+}
+
+.card-footer {
+    padding: .75rem 1.25rem;
+    background-color: #f7f3f0;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.075);
+    align-items: center;
+    display: block;
+    position: relative;
+    font-weight: 500;
+}
+
+.card-footer::after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.card-footer:last-child {
+    border-radius: 0 0 .25rem .25rem
+}
+
+.card .comment-author img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 1em;
+}
+.info {
+    margin: 0 1.5rem 0 .3rem;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1rem;
+    font-family: 'Be Vietnam', sans-serif;
+}
+.author {
+    display: block;
+    font-weight: 500 !important;
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+.date-posted {
+    color: rgb(165, 164, 164);
+    font-size: .8rem;
+    display: block;
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+.card .mod-options {
+    float: right;
+    color: #333;
+    font-size: 1.2rem;
+    margin-top: 0.5em;
+}
+
+.card .mod-options .btn-icon {
+    margin-right: 1em;
+    opacity: .6;
+    cursor: pointer
+}
+
+.article-page .card .mod-options .btn-icon:hover {
+    opacity: 1
+}
+.card-text{
+    font-size: 1rem;
+}
+
+
+.form-control {
+    font-family: 'Be Vietnam',sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.25;
+    color: #000000;
+    border: 0.5px solid rgba(117, 116, 116, 0.555);
+    border-radius: 12px;
+    width: 100%;
+    padding: 0.7em;
+}
+
+
+.form-control::-ms-expand {
+    background-color: transparent;
+    border: 0
+}
+
+.form-control:focus {
+    border-color: #ecd654;
+    outline: none
+}
+
+.form-control::placeholder {
+    color: rgb(150, 144, 148);
+    opacity: 1
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+    background-color: #eceeef;
+    opacity: 1
+}
+
+.form-control:disabled {
+    cursor: not-allowed
+}
+
+textarea {
+    border: 0;
+    padding: 1.25rem
+}
+
+button {
+    font-family: 'Be Vietnam', sans-serif;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	background: #f5b658;
+	color: #fff;
+    text-decoration: none;
+	border: none;
+	cursor: pointer;
+	transition: .3s ease all;
+	border-radius: 15px;
+	position: relative;
+	overflow: hidden;
+    height: 37px;
+    width: 110px;
+    float: right;
+}
+ button span {
+
+	position: relative;
+	z-index: 2;
+	transition: .3s ease all;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+button::after {
+	content: "";
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: calc(-100% - 80px);
+	border-bottom: 80px solid #fdac41;
+	border-right: 80px solid transparent;
+	transition: .4s ease-in-out all;
+}
+
+ button:hover::after {
+	left: 0;
+}
+
+.mda-form-msg{
+    font-size: 12px;
+}

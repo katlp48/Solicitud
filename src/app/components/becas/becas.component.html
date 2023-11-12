@@ -1,0 +1,135 @@
+<div>
+  <div>
+    <div>
+      <h2 class="alinear">  Lista de becas</h2>
+    </div>
+    <div class="col-log-6" style="text-align:right">
+      <button mat-raised-button [routerLink]="['/homePage',userId,'add',userId]">
+        Añadir Beca
+      </button>
+      <!-- <button mat-raised-button (click)="exportExcel()">
+        Exportar Excel
+      </button> -->
+    </div>
+  </div>
+  
+  <mat-toolbar>
+    <mat-form-field style="width: 100%" floatLabel='never'>
+    <input  
+           matInput 
+           type="text"
+           [(ngModel)]="searchText" 
+           (keyup)="search($event)"
+           placeholder="Search" 
+           autocomplete="off" >
+  </mat-form-field>
+  </mat-toolbar>
+  
+  <div class="container">
+  <mat-card 
+     *ngFor="let beca of becas | filterbeca :searchKey:'title'" 
+     (click)="selectBeca(beca);">
+  
+     <mat-card class="beca-card" >
+      <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{beca.title}}</mat-card-title>
+    <mat-card-subtitle></mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src={{beca.imgUrl}} alt="https://img.freepik.com/vector-premium/casquillo-graduado-ilustracion-icono-beca_138676-177.jpg?w=2000">
+  <mat-card-content>
+    <p>
+     {{beca.description}}
+    </p>
+    
+  </mat-card-content>
+  <mat-card-actions>
+    
+    <button mat-button [routerLink]="['/homePage',userId,'becas',userId,'detalle',beca.id]">Ver requisitos</button>
+     
+    <a class="pointer" [routerLink]="['/homePage',userId,'edit',userId,'beca', beca.id]" style="color: #1878b0; cursor: pointer">
+      <mat-icon>edit</mat-icon>
+    </a>
+    <a
+    (click)="deleteBeca(beca.id)"
+    class="pointer"
+    style="color: #e15639"
+  >
+    <mat-icon style="cursor: pointer">delete</mat-icon>
+  </a>
+  </mat-card-actions>
+  </mat-card>
+  <!-- 
+  <span>Read more...</span>
+  <ul class="tag-list">
+    <li class="tag-default tag-pill tag-outline"
+      *ngFor="let tag of lista">
+      {{ tag }}
+    </li> 
+  </ul> -->
+  
+  
+  </mat-card>
+  </div>
+  </div>
+  <!-- <mat-card class="example-card-two" *ngFor="let title of this.becas.filterBecaByTitle()">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"><mat-label>Buscar Beca por Título</mat-label></div>
+        
+    </mat-card-header>
+  
+  
+  </mat-card> -->
+  <!-- <mat-card-header>
+    <div>
+      
+        <mat-label>Buscar Beca por Título</mat-label>
+        <input type="text" matInput #input (keyup)="filterBecaByTitle(input.value)" />
+      
+    </div>
+  </mat-card-header> -->
+  
+  
+  <!-- <div class="container">
+  
+      <mat-card class="beca-card" *ngFor="let beca of becas" >
+            <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{beca.title}}</mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src={{beca.imgUrl}} alt="https://img.freepik.com/vector-premium/casquillo-graduado-ilustracion-icono-beca_138676-177.jpg?w=2000">
+        <mat-card-content>
+          <p>
+           {{beca.description}}
+          </p>
+          
+        </mat-card-content>
+        <mat-card-actions>
+          
+          <button mat-button [routerLink]="['/homePage',userId,'becas',userId,'detalle',beca.id]">Ver requisitos</button>
+           
+          <a class="pointer" [routerLink]="['/homePage',userId,'edit',userId,beca.id]" style="color: #1878b0; cursor: pointer">
+            <mat-icon>edit</mat-icon>
+          </a>
+          <a
+          (click)="deleteBeca(beca.id)"
+          class="pointer"
+          style="color: #e15639"
+        >
+          <mat-icon style="cursor: pointer">delete</mat-icon>
+        </a>
+        </mat-card-actions>
+      </mat-card>
+  
+      <span>Read more...</span>
+        <ul class="tag-list">
+          <li class="tag-default tag-pill tag-outline"
+            *ngFor="let tag of lista">
+            {{ tag }}
+          </li>
+        </ul> 
+     
+    </div>
+     -->
+  

@@ -1,0 +1,25 @@
+* {
+    font-family: 'Be Vietnam', sans-serif;
+  }
+  .titulo{
+    text-align: center;
+    margin: 3em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+  }
+  h1{
+    font-family: 'Concert One';
+    font-size: 30px;
+  }
+  .article-preview {
+    padding: 1.5rem 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+  .app-article-preview {
+    margin: 0 0 1rem
+  }
+  

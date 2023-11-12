@@ -1,0 +1,35 @@
+* {
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+h1 {
+    font-family: 'Concert One'
+}
+
+h3 {
+    font-weight: bold;
+}
+
+.mat-dialog-actions{
+    flex-wrap: nowrap;
+}
+button{
+    background-color: rgb(255, 213, 134) ;
+}
+button span{
+
+    font-family: 'Be Vietnam', sans-serif;
+    font-weight: bold;
+}
+.mat-button {
+    padding: 0 0;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+}
+
+button:focus, button:hover{
+    background-color: rgb(255, 194, 80) ;
+}
+button:active{
+    background-color: rgb(255, 194, 80) ;
+}

@@ -1,0 +1,24 @@
+<div class="article-meta">
+    
+  <img src="{{imgfile}}" alt="foto-perfil">
+
+    <div class="info">
+      <a class="author">
+        {{ nombreCompleto }}
+      </a>
+      <div [hidden]="detalle">
+      <span class="date">
+        {{ post.createdAt | date: 'longDate' }}
+      </span></div>
+      <div [hidden]="!detalle">
+      <span class="username">
+        {{ "@ "+ post.author.user.username }}
+      </span>
+      <span class="grade">
+        {{ post.author.grade }}
+      </span>
+    </div>
+    </div>
+  
+    <ng-content></ng-content>
+  </div>

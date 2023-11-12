@@ -1,0 +1,54 @@
+mat-sidenav {
+    background: #f3e5d3;
+    width: 230px;
+    height: 100%;
+}
+mat-sidenav-content {
+    height: 100vh;
+}
+mat-sidenav-content .main {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+mat-toolbar {
+    background-color: #f19c51;
+    justify-content: space-between;
+}
+mat-toolbar mat-icon {
+    margin-left: 15px;
+    color: #ffffff;
+}
+mat-toolbar.box {
+    margin-top: 15px;
+}
+span .imagen{
+    margin-top: 10;
+    align-items: center;
+}
+img {
+    width: 60x;
+    height: 60px;
+    overflow: hidden;
+    margin-top: -6px;
+    margin-right: 1000px;
+    align-items: left;
+}
+span {
+    margin: auto;
+    text-align: center;
+}
+.spacer-components {
+    flex: 1 1 auto;
+ }
+.menu-button mat-icon{
+    vertical-align: middle;
+
+}
+.sidebar-icon{
+    cursor:pointer;
+}
+/* añadiendo */
+.header-cont img {
+    width: 1000px;
+    margin-bottom: 100px;
+  }

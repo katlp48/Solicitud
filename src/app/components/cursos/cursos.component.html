@@ -1,0 +1,78 @@
+<div>
+  <div>
+    <h2 class="alinear">  Lista de cursos</h2>
+  </div>
+  <!-- He comentado esta parte porque el usuario no puede añdir curso ni exportar excel -->
+  <!-- <div class="col-log-6" style="text-align:right">
+    <button mat-raised-button [routerLink]="['/homePage',userId,'addcurso',userId]">
+      Añadir Curso
+    </button>
+    <button mat-raised-button (click)="exportExcel()">
+      Exportar Excel
+    </button>
+  </div>
+</div> -->
+<!-- Esto ya estaba comentado (lo de abajo) -->
+<!-- <mat-card-header>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Buscar Curso por Nombre</mat-label>
+      <input matInput #input (keyup)="filterCurso(input.value)" />
+    </mat-form-field>
+  </div>
+</mat-card-header> -->
+<mat-toolbar>
+  <mat-form-field style="width: 100%" floatLabel='never'>
+  <input  
+         matInput 
+         type="text"
+         [(ngModel)]="searchText" 
+         (keyup)="search($event)"
+         placeholder="Search" 
+         autocomplete="off" >
+</mat-form-field>
+</mat-toolbar>
+
+<div class="container">
+    <mat-card class="curso-card" *ngFor="let curso of curso | filterbeca :searchKey:'title'" 
+    (click)="selectCurso(curso);">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{curso.title}}</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+     
+      <mat-card-content>
+        <p>
+         {{curso.description}}
+        </p>
+        <p>S/.{{curso.cost}}</p>
+        
+      </mat-card-content>
+      <mat-card-actions>
+        
+        <button mat-button [routerLink]="['/homePage',userId,'cursos',userId,'detalle',curso.id]">Ver más</button>
+         
+        <!-- He comentado esta parte porque el usuario no puede editar ni eliminar -->
+        <!-- <a class="pointer" [routerLink]="['/homePage',userId,'editcurso',userId,curso.id]" style="color: #1878b0; cursor: pointer;">
+          <mat-icon>edit</mat-icon>
+        </a>
+        <a
+        (click)="deleteCurso(curso.id)"
+        class="pointer"
+        style="color: #e15639;cursor: pointer;"
+      >
+        <mat-icon>delete</mat-icon>
+      </a> -->
+      </mat-card-actions>
+    </mat-card>
+  
+    <!--   <span>Read more...</span>
+      <ul class="tag-list">
+        <li class="tag-default tag-pill tag-outline"
+          *ngFor="let tag of lista">
+          {{ tag }}
+        </li>
+      </ul> -->
+   
+  </div>

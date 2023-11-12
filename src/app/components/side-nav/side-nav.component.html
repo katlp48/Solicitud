@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<div class="navbar">
+    <div class="top">
+    </div>
+    <div class="user" id="usuario">
+        <img src="{{imgfile}}" width="50" height="50" alt="">
+        <h4 class="name" id="nombreUsu"> @ {{ profile.name }}</h4>
+        <p class="mail">{{ nombreCompleto }}</p>
+    </div>
+    <div class="menu">
+      
+        <div class="menu-item">
+            <button mat-button class="menu-button" [routerLink]="['/homePage',route.snapshot.paramMap.get('id'),'inicio']">
+                <mat-icon>home</mat-icon>
+                <span>Home</span>
+            </button>
+
+            <button mat-button class="menu-button" [routerLink]="['/homePage',route.snapshot.paramMap.get('id'),'becas',route.snapshot.paramMap.get('id')]">
+                <mat-icon>school</mat-icon>
+                <span>Becas</span>
+            </button>
+            <button mat-button class="menu-button" [routerLink]="['/homePage',route.snapshot.paramMap.get('id'),'foro',route.snapshot.paramMap.get('id')]">
+                <mat-icon> chat_bubble_outline</mat-icon>
+                <span>Foro</span>
+            </button>
+            <button mat-button class="menu-button" [routerLink]="['/homePage',route.snapshot.paramMap.get('id'),'solicitud',route.snapshot.paramMap.get('id')]">
+                <mat-icon>calendar_today </mat-icon>
+                <span>Solicitud</span>
+            </button>
+        </div>
+    </div>
+</div>

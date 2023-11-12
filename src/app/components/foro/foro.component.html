@@ -1,0 +1,52 @@
+<div class="container page">
+  <h1>Foro</h1>
+
+  <mat-tab-group>
+    <mat-tab>
+      <ng-template mat-tab-label
+      (click)="setListTo('all')">
+        <mat-icon class="example-tab-icon">public</mat-icon>
+        <span class = "espacio"></span>
+        Global posts
+      </ng-template>
+      <div class="row">
+        <div class="col-md-9">
+          <app-list-posts [limit]="3" [config]="listConfig">
+
+          </app-list-posts>
+        </div>
+        <div class="col-md-3">
+          <div class="sidebar">
+            <p>Popular Tags</p>
+
+            <div class="tag-list">
+              <a *ngFor="let tag of tags" (click)="setListTo('tag', tag.name)" 
+              class="tag-default tag-pill"
+              [ngClass]="{'active': listConfig.type === 'tag'}"
+              >
+                {{ tag.name }}
+              </a>
+            </div>
+
+            <div [hidden]="tagsLoaded">
+              Loading tags...
+            </div>
+
+            <div [hidden]="!tagsLoaded || tags.length > 0">
+              No tags are here... yet.
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon"> add</mat-icon>
+        New post
+      </ng-template>
+      <app-new-post></app-new-post>
+    </mat-tab>
+
+     </mat-tab-group>
+</div>

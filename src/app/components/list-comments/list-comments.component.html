@@ -1,0 +1,59 @@
+<div class="card">
+    <div class="card-block">
+      <p *ngIf="!campo" class="card-text">
+        {{ comentario.body }}
+      </p>
+      <div *ngIf="campo" >
+        <form [formGroup]="myForm" autocomplete="off">
+        <div class="col-lg-12">
+            <input matInput formControlName="body" class="form-control" />
+          <div
+            *ngIf="
+              myForm.get('body')?.hasError('required') &&
+              myForm.get('body')?.touched
+            "
+          >
+            <span class="mda-form-msg" style="color:red"> * Este campo es obligatorio </span>
+          </div>
+        </div>
+        <br>
+        <div class="col-lg-12">
+           <button
+            class="btn btn-secondary btn-lg float-right"
+            [disabled]="myForm.invalid"
+            type="button"
+            (click)="editarComentario()"
+          >
+          <span>Actualizar</span>
+          </button>
+        </div>
+      </form>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <a class="comment-author">
+          <img src="{{imgfile}}" alt="foto-perfil" >
+      </a>
+      <div class="info">
+      <a class="author">
+        {{ nombre }}
+      </a>
+      <span class="date-posted">
+        {{ comentario.createdAt | date: 'longDate' }}
+      </span>
+    </div>
+      <span class="mod-options" 
+        [hidden]="!canModify">
+        <a (click)="evaluarCampo()"
+        class="btn-icon">
+            <mat-icon style="color: #e15639">edit</mat-icon>
+        </a>
+        <a (click)="deleteComentario(comentario.id)"
+          class="btn-icon"
+        >
+          <mat-icon style="color: #0e124b">delete</mat-icon>
+        </a>
+      </span>
+
+  </div>

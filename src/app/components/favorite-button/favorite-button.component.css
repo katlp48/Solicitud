@@ -1,0 +1,23 @@
+.btn-sm {
+    color: rgb(173, 168, 168);
+    border-radius: 5px;
+    font-size: 15px;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 100px;
+}
+
+.btn-primary {
+    color: #D8843B;
+}
+
+.btn-primary:hover {
+    color: #D8843B;
+
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+    color: #D8843B;
+
+}

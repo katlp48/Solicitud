@@ -1,0 +1,60 @@
+.article-preview {
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 1rem 3rem;
+    text-align: left;
+
+    max-width: 60%;
+    margin: auto;
+
+    border-radius: 80px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    vertical-align: center;
+    margin-bottom: 30px;
+    background-color: antiquewhite;
+
+}
+
+.preview-link{
+    text-decoration: none
+}
+.article-preview img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 30px;
+    height: 70px;
+    width: 70px;
+    border-radius: 30px;
+    
+}
+.article-preview .preview-link .info{
+    vertical-align: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.article-preview .preview-link .info .description {
+    font-weight: 300;
+    font-size: 1.3em;
+    color: rgb(0, 0, 0);
+    line-height: 1.3rem;
+    font-family: 'Be Vietnam', sans-serif;
+}
+.article-preview .preview-link .fecha {
+    font-weight: 300;
+    font-size: 1em;
+    color: rgb(117, 117, 117);
+    line-height: 1.3rem;
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+.preview-link {
+    color: inherit !important;
+    font-family: 'Be Vietnam', sans-serif;
+
+}
+
+.preview-link:hover {
+    text-decoration: inherit !important;
+    
+}

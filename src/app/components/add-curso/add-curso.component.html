@@ -1,0 +1,74 @@
+<div class="row">
+    <div class="col-lg-6">
+      <h2 class="alinear">Registro de Curso</h2>
+    </div>
+  </div>
+  <div class="container-page">
+  <div class="row">
+    <div class="col-lg-4">
+      <form [formGroup]="myForm" autocomplete="off">
+        <div class="col-lg-12">
+          <mat-form-field appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="name" />
+          </mat-form-field>
+          <div
+            *ngIf="
+              myForm.get('name')?.hasError('required') &&
+              myForm.get('name')?.touched
+            "
+            style="margin-top: -20px"
+          >
+            <span class="mda-form-msg"> This field is required </span>
+          </div>
+          <div
+            *ngIf="myForm.get('name')?.hasError('maxlength')"
+            style="margin-top: -20px"
+          >
+            <span class="mda-form-msg">
+              This field must have a maximum of 60 characters
+            </span>
+          </div>
+        </div>
+       
+        <fieldset class="form-group">
+          <textarea class="form-control"
+            style="font-family: 'Be Vietnam', sans-serif;font-size: 17px;"
+            formControlName="description"
+            rows="5"
+            placeholder="Descripción">
+          </textarea>
+        </fieldset>
+ 
+    
+        <mat-form-field appearance="fill" floatLabel="always">
+            <mat-label>Cost</mat-label>
+            <input matInput type="number" class="example-right-align" formControlName="cost" placeholder="0">
+            <span matPrefix>S/.&nbsp;</span>
+            <span matSuffix>.00</span>
+          </mat-form-field>
+   
+  
+          
+        <div class="col-lg-12">
+          <button
+            class="btn btn-success btn-lg float-right"
+            [disabled]="myForm.invalid"
+            type="button"
+            style="margin-left: 10 px"
+            (click)="saveCurso()"
+          >
+            Save
+          </button>
+          <button
+            class="btn btn-secondary btn-lg float-right"
+            type="button"
+            [routerLink]="['/homePage',userId,'cursos',userId]"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>

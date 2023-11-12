@@ -1,0 +1,13 @@
+  
+  <div class="article-preview">
+    <img src="../../../assets/img/logo.png" />
+    <a (click)="linkear()"  style="cursor: pointer;"
+     class="preview-link">
+     <div class="info">
+      <p class="description">{{ aviso.description }}</p>
+      <p class="fecha"> 
+        {{ aviso.created | date: 'mediumDate' }} a las {{ aviso.created | date: 'shortTime' }}
+      </p>
+    </div>
+    </a>
+  </div>

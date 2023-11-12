@@ -1,0 +1,105 @@
+<div class="editor-page">
+    <div class="container-page">
+      <div class="row">
+        <h1>Edite su post</h1>
+          <form [formGroup]="postForm">
+              <fieldset>  
+                
+              <fieldset class="form-group">
+                <div
+                *ngIf="
+                  postForm.get('title')?.hasError('required') &&
+                  postForm.get('title')?.touched
+                "
+              >
+                <span class="mda-form-msg"> * Este campo es obligatorio </span>
+              </div>
+              <div
+                  *ngIf="postForm.get('title')?.hasError('maxlength')"
+              >
+                <span class="mda-form-msg"> * Este campo maximo tiene 100 caracteres </span>
+              </div>
+                <input class="form-control"
+                  style="font-family: 'Be Vietnam', sans-serif; font-size: 20px;"
+                  formControlName="title"
+                  type="text"
+                  placeholder="Título" />
+              </fieldset>
+            
+  
+              <fieldset class="form-group">
+                <div
+                *ngIf="
+                  postForm.get('description')?.hasError('required') &&
+                  postForm.get('description')?.touched
+                "
+              >
+                <span class="mda-form-msg"> * Este campo es obligatorio </span>
+              </div>
+                <input class="form-control"
+                  style="font-family: 'Be Vietnam', sans-serif;font-size: 17px;"
+                  formControlName="description"
+                  type="text"
+                  placeholder="Descripción" />
+              </fieldset>
+             
+              <fieldset class="form-group">
+                <div
+                *ngIf="
+                  postForm.get('body')?.hasError('required') &&
+                  postForm.get('body')?.touched
+                "
+              >
+                <span class="mda-form-msg"> * Este campo es obligatorio </span>
+              </div>
+              <div
+              *ngIf="postForm.get('body')?.hasError('maxlength')"
+              >
+                <span class="mda-form-msg"> * Este campo maximo tiene 1200 caracteres </span>
+              </div>
+                <textarea class="form-control"
+                  style="font-family: 'Be Vietnam', sans-serif;font-size: 17px;"
+                  formControlName="body"
+                  rows="8"
+                  placeholder="Escribe aquí el contenido del post">
+                </textarea>
+              </fieldset>
+             
+
+              <fieldset class="form-group">
+                <input class="form-control"
+                  style="font-family: 'Be Vietnam', sans-serif;font-size: 17px;"
+                  type="text"
+                  placeholder="Ingrese tags"
+                  [formControl]="tagField"
+                  (keyup.enter)="addTag()" />
+  
+                <div class="tag-list">
+                  <span *ngFor="let tag of tagList"
+                    class="tag-default tag-pill">
+                    <span class="tag-name">{{ tag }}</span>
+                    <mat-icon (click)="removeTag(tag)"> cancel</mat-icon>
+                    
+                  </span>
+                </div>
+              </fieldset>
+          
+              <button class="btn-primary" type="button" 
+              [disabled]="postForm.invalid"
+              (click)="submitForm()">
+               <span>Actualizar</span>
+              </button>
+
+              <!-- se añadio el boton cancelar -->
+
+              <button class="btn-primary" type="button" 
+              [routerLink]="['/homePage', userId,'foro',idUser]">
+               <span>Cancelar</span>
+              </button>
+  
+            </fieldset>
+          </form>
+  
+      </div>
+    </div>
+  </div>

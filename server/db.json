@@ -1,0 +1,98 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Nadia Lorena A",
+      "lastname": "Tinoco Ricapa B",
+      "phone": "940149604",
+      "grade": "Estudiant",
+      "email": "lorenanadia20@gmail.com",
+      "username": "Nad456",
+      "password": "contraseñajajaja"
+    },
+    {
+      "id": 2,
+      "name": "Angelica Maria",
+      "lastname": "Lira Pacheco",
+      "phone": "928291992",
+      "grade": "Estudiante",
+      "email": "angelica.0406@gmail.com",
+      "username": "LikaBobzinho",
+      "password": "norecuerdoxd"
+    },
+    {
+      "id": 3,
+      "name": "William",
+      "lastname": "Huertas",
+      "phone": "928291966",
+      "grade": "Estudiante",
+      "email": "willy.0406@gmail.com",
+      "username": "Bobzinho",
+      "password": "contra12"
+    },
+    {
+      "id": 4,
+      "name": "William",
+      "lastname": "Huertas Acevedo",
+      "phone": "943708015",
+      "grade": "estudiante",
+      "email": "alirapacheco02@gmail.com",
+      "username": "asdfg",
+      "password": "124563"
+    },
+    {
+      "id": 5,
+      "name": "Diana",
+      "lastname": "Tinoco",
+      "phone": "940149607",
+      "grade": "Estudiante",
+      "email": "didu@gmail.com",
+      "username": "korekohana",
+      "password": "perritos"
+    },
+    {
+      "id": 6,
+      "name": "Alejandro",
+      "lastname": "Lala",
+      "phone": "123456789",
+      "grade": "Estudiante",
+      "email": "ale@gmail.com",
+      "username": "ale",
+      "password": "123456"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "slug": "Post 1",
+      "title": "Repellat nihil in magnam quasi.\nEt dicta at est laborussnon.\n",
+      "description": "Eos necessitatibus officia quos. Et vitg",
+      "body": "Aqui va el body",
+      "tagList": [
+        "necessitatibus",
+        "sequi",
+        "vitae",
+        "doloribus"
+      ],
+      "createdAt": "2022-10-09T10:14:34.005Z",
+      "updatedAt": "2022-10-09T10:14:34.005Z",
+      "favorited": false,
+      "favoritesCount": 0,
+      "authorId": 6
+    }
+  ],
+  "becas": [
+    {
+      "id": 5,
+      "title": "Estudia en Suiza-Convocatoria 2022",
+      "imgUrl": "https://becasyconvocatorias.org/wp-content/uploads/2020/09/becas-en-suiza-para-latinoamericanos.jpg",
+      "description": "Dirigido a investigadores, profesionales con grado de magíster y estudiantes posgraduados interesados en continuar con su formación en importantes universidades de Suiza."
+    },
+    {
+      "id": 6,
+      "title": "Estudia en Suiza-Convocatoria 2022",
+      "imgUrl": "https://becasyconvocatorias.org/wp-content/uploads/2020/09/becas-en-suiza-para-latinoamericanos.jpg",
+      "description": "Dirigido a investigadores, profesionales con grado de magíster y estudiantes posgraduados interesados en continuar con su formación en importantes universidades de Suiza."
+    }
+  ]
+}

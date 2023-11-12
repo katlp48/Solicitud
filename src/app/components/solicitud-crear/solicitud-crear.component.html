@@ -1,0 +1,123 @@
+<div class="row">
+    <div class="col-lg-6">
+      <h2 class="alinear">Registro de Cotizacion</h2>
+    </div>
+  </div>
+  <div class="container-page">
+    <div class="row">
+      <div class="col-lg-4">
+        <form [formGroup]="myForm" autocomplete="off">
+          <fieldset class="form-group">
+            <mat-label>Tipo de Moneda</mat-label>
+            <mat-radio-group formControlName="tipomoneda" >
+              <mat-radio-button value="Sol">Sol</mat-radio-button>
+              <mat-radio-button value="Dolar">Dolar</mat-radio-button>
+            </mat-radio-group>
+          </fieldset>
+            
+          <fieldset class="form-group">
+            <mat-label>Valor del vehiculo</mat-label>
+            <input class="form-control" matInput formControlName="v" placeholder="1000.00" />
+          </fieldset>
+        
+          <fieldset class="form-group">
+            <mat-label>Porcentaje de cuota inicial</mat-label>
+            <input class="form-control" matInput formControlName="ci" placeholder="50%" />
+          </fieldset>
+        
+          <fieldset class="form-group">
+            <mat-label>Porcentaje de cuota final</mat-label>
+            <input matInput formControlName="cf" placeholder="30%" class="form-control"/>
+          </fieldset>
+        
+          <fieldset class="form-group">
+            <mat-label>Frecuencia de pago</mat-label>
+            <mat-select formControlName="frecuencia" class="form-control">
+              <mat-option value="Anual">Anual</mat-option>
+              <mat-option value="Semestral">Semestral</mat-option>
+              <mat-option value="Trimestral">Trimestral</mat-option>
+              <mat-option value="Mensual">Mensual</mat-option>
+              <mat-option value="Quincenal">Quincenal</mat-option>
+              <mat-option value="Diaria">Diaria</mat-option>
+            </mat-select>
+          </fieldset>
+        
+          <fieldset class="form-group">
+            <mat-label>Fecha de pago de cuota inicial </mat-label>
+            <mat-form-field>
+              <input matInput [matDatepicker]="picker" formControlName="fechaci" class="form-control">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </fieldset>
+        
+          <fieldset class="form-group">
+            <mat-label>Tipo de tasa</mat-label>
+            <mat-radio-group formControlName="tipotasa">
+              <mat-radio-button value="Efectiva">Efectiva</mat-radio-button>
+              <mat-radio-button value="Nominal">Nominal</mat-radio-button>
+            </mat-radio-group>
+          </fieldset>
+        
+          <fieldset class="form-group">
+            <mat-label>Periodo de tasa</mat-label>
+            <mat-select formControlName="periodotasa" class="form-control">
+              <mat-option value="Anual">Anual</mat-option>
+              <mat-option value="Semestral">Semestral</mat-option>
+              <mat-option value="Trimestral">Trimestral</mat-option>
+              <mat-option value="Mensual">Mensual</mat-option>
+              <mat-option value="Quincenal">Quincenal</mat-option>
+              <mat-option value="Diaria">Diaria</mat-option>
+            </mat-select>
+          </fieldset>
+        
+          <fieldset class="form-group">
+            <mat-label>Valor de tasa</mat-label>
+            <input matInput formControlName="valortasa" placeholder="8%" class="form-control"/>
+          </fieldset>
+        
+          <fieldset class="form-group">
+            <mat-label>Capitalizacion</mat-label>
+            <mat-select formControlName="capitalizacion" class="form-control">
+              <mat-option value="Anual">Anual</mat-option>
+              <mat-option value="Semestral">Semestral</mat-option>
+              <mat-option value="Trimestral">Trimestral</mat-option>
+              <mat-option value="Mensual">Mensual</mat-option>
+              <mat-option value="Quincenal">Quincenal</mat-option>
+              <mat-option value="Diaria">Diaria</mat-option>
+            </mat-select>
+          </fieldset>
+        
+          <fieldset class="form-group">
+            <mat-label>Plazo del prestamo</mat-label>
+            <input matInput formControlName="plazo" placeholder="cantidad de periodos del plazo" class="form-control"/>
+          </fieldset>
+        
+          <fieldset class="form-group">
+            <mat-label>Periodo de gracia</mat-label>
+            <mat-select formControlName="periodogracia" class="form-control">
+              <mat-option value="Total">Total</mat-option>
+              <mat-option value="Parcial">Parcial</mat-option>
+              <mat-option value="Ninguna">Ninguna</mat-option>
+            </mat-select>
+          </fieldset>
+        
+          <fieldset class="form-group">
+            <mat-label>Cantidad de periodos de gracia</mat-label>
+            <input matInput formControlName="cantperiodo" placeholder="0" class="form-control" />
+          </fieldset>
+
+            <div class="options">
+                <button class="btn-primary" [disabled]="myForm.invalid" type="button" style="margin-left: 10 px"
+                (click)="saveSolicitud()">
+                <span>Cotizar</span>
+                </button>
+                <span style="margin: 20px;"></span>
+                <button class="btn-primary" type="button" [routerLink]="['/homePage',userId,'becas',userId]">
+                <span>Cancel</span>
+                </button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>

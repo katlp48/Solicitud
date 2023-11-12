@@ -1,0 +1,70 @@
+
+ * {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+mat-icon {
+    color: black;
+    font-family: 'Material Icons';
+    vertical-align: middle;
+}
+
+.top {
+    margin-top: 15px;
+    padding: 8px;
+    margin-left: 160px;
+    font-size: 30px;
+}
+.user {
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+.user img {
+    margin-top: 16px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.user .name {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.user .mail {
+    margin-top: -10px;
+    color: #1b1a19;
+    font-style: italic;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.menu-head {
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: underline;
+}
+.menu-item {
+    margin: 0 10px 0 10px;
+}
+.menu-item .menu-button {
+    display: block;
+    width: 100%;
+    position: relative;
+    display: flex;
+    padding-left: 40px;
+    margin-bottom: 10px;
+}
+.menu-item .menu-button span {
+    margin-left: 15px;
+    color: black;
+}
+.menu-item .menu-button:hover {
+    background: #d8843b81;
+}
+.menu-item .menu-button:focus {
+    background: #fafafa83;
+}
