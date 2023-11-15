@@ -105,6 +105,7 @@
             <mat-option value="Mensual">Mensual</mat-option>
             <mat-option value="Quincenal">Quincenal</mat-option>
             <mat-option value="Diaria">Diaria</mat-option>
+            <mat-option value="Diaria">NO APLICA</mat-option>
           </mat-select>
         </fieldset>
       
@@ -112,22 +113,19 @@
       
         <fieldset class="form-group">
           <mat-label>Periodo de gracia</mat-label>
-          <mat-radio-group formControlName="periodogracia" >
+          <mat-radio-group formControlName="periodogracia">
             <br>
             <mat-radio-button value="Total">Total</mat-radio-button>
             <mat-radio-button value="Parcial">Parcial</mat-radio-button>
             <mat-radio-button value="Ninguna">Ninguna</mat-radio-button>
           </mat-radio-group>
         </fieldset>
-
-
-
-
-      
+        
         <fieldset class="form-group">
           <mat-label>Cantidad de periodos de gracia</mat-label>
-          <input matInput formControlName="cantperiodo" placeholder="0" class="form-control" />
+          <input matInput formControlName="cantperiodo" placeholder="0" class="form-control" [readonly]="isCantPeriodoReadOnly()" />
         </fieldset>
+        
 
           
         </div>
