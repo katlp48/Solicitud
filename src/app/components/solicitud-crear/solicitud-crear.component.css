@@ -3,6 +3,8 @@
     margin-top: 15px;
     font-size: 2.7em;
     font-family: 'Concert One';
+    padding: 5px 35px;
+
   }
 
   fieldset {
@@ -11,19 +13,8 @@
     margin: 0;
     border: 0;
   }
-  h1{
-    font-family: 'Be Vietnam', sans-serif;
-    font-weight: bold;
-    font-size: 22px;
-    }
-  
-  .form-group {
-    margin-bottom: 1.1rem;
-    font-family: 'Be Vietnam', sans-serif;
-  }
-  .mat-radio-button{
-    margin-left: 16px;
-  }
+
+
   
   .form-control {
     display: block;
@@ -101,7 +92,7 @@
   }
   
   .container-page {
-    max-width: 80%;
+    max-width: 100%;
     margin: 0 auto;
     display: flow-root;
     flex-direction: column;
@@ -158,6 +149,29 @@
   .mda-form-msg{
     font-family: 'Be Vietnam', sans-serif;
     font-size: 15px;
-    color: #e72f2f;
+    color: rgb(17, 17, 155);
     padding-bottom: 15px;
   }
+
+  /* Nuevo */ 
+.row {
+  display: flex;
+  flex-direction: row; 
+
+}
+
+.col {
+  flex: 1;  
+
+}
+.col-lg-6 {
+  color: rgb(9, 9, 117); /* Puedes cambiar "blue" por el color que desees */
+  text-align: center;
+}
+.form-group {
+  padding: 5px 55px;
+}
+mat-radio-button {
+  margin-right: 7px;
+}
+
